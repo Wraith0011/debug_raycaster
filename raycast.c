@@ -107,16 +107,16 @@ void cast_ray(float angle, int ray_index)
 	if (horizontal_hit_distance > vertical_hit_distance)
 	{
 			// Store vertical ray information
-			rays[ray_index].ray_angle = ray_angle;
-			rays[ray_index].was_intersection_vertical = true;
-			rays[ray_index].is_ray_facing_up = is_ray_facing_up;
-			rays[ray_index].is_ray_facing_down = is_ray_facing_down;
-			rays[ray_index].is_ray_facing_left = is_ray_facing_left;
-			rays[ray_index].is_ray_facing_right = is_ray_facing_right;
-			rays[ray_index].wallhit_x = vertical_wall_hit_x;
-			rays[ray_index].wallhit_y = vertical_wall_hit_y;
-			rays[ray_index].wallhit_id = vertical_wall_hit_id;
-			rays[ray_index].distance = distance_between_points(player.x, player.y, vertical_wall_hit_x, vertical_wall_hit_y);
+			// rays[ray_index].ray_angle = ray_angle;
+			// rays[ray_index].was_intersection_vertical = true;
+			// rays[ray_index].is_ray_facing_up = is_ray_facing_up;
+			// rays[ray_index].is_ray_facing_down = is_ray_facing_down;
+			// rays[ray_index].is_ray_facing_left = is_ray_facing_left;
+			// rays[ray_index].is_ray_facing_right = is_ray_facing_right;
+			// rays[ray_index].wallhit_x = vertical_wall_hit_x;
+			// rays[ray_index].wallhit_y = vertical_wall_hit_y;
+			// rays[ray_index].wallhit_id = vertical_wall_hit_id;
+			// rays[ray_index].distance = distance_between_points(player.x, player.y, vertical_wall_hit_x, vertical_wall_hit_y);
 	}
 	else
 	{
