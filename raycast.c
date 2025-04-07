@@ -119,31 +119,37 @@ void cast_ray(float angle, int ray_index)
 
 	if (horizontal_hit_distance > vertical_hit_distance)
 	{
-		// Store vertical ray information
-		rays[ray_index].ray_angle = ray_angle;
-		rays[ray_index].was_intersection_vertical = true;
-		rays[ray_index].is_ray_facing_up = is_ray_facing_up;
-		rays[ray_index].is_ray_facing_down = is_ray_facing_down;
-		rays[ray_index].is_ray_facing_left = is_ray_facing_left;
-		rays[ray_index].is_ray_facing_right = is_ray_facing_right;
-		rays[ray_index].wallhit_x = vertical_wall_hit_x;
-		rays[ray_index].wallhit_y = vertical_wall_hit_y;
-		rays[ray_index].wallhit_id = vertical_wall_hit_id;
-		rays[ray_index].distance = vertical_hit_distance;
+		if (found_vertical_wall == true)
+		{
+			// Store vertical ray information
+			rays[ray_index].ray_angle = ray_angle;
+			rays[ray_index].was_intersection_vertical = true;
+			rays[ray_index].is_ray_facing_up = is_ray_facing_up;
+			rays[ray_index].is_ray_facing_down = is_ray_facing_down;
+			rays[ray_index].is_ray_facing_left = is_ray_facing_left;
+			rays[ray_index].is_ray_facing_right = is_ray_facing_right;
+			rays[ray_index].wallhit_x = vertical_wall_hit_x;
+			rays[ray_index].wallhit_y = vertical_wall_hit_y;
+			rays[ray_index].wallhit_id = vertical_wall_hit_id;
+			rays[ray_index].distance = vertical_hit_distance;
+		}
 	}
 	else
 	{
-		// Store horizontal ray information
-		rays[ray_index].ray_angle = ray_angle;
-		rays[ray_index].was_intersection_vertical = false;
-		rays[ray_index].is_ray_facing_up = is_ray_facing_up;
-		rays[ray_index].is_ray_facing_down = is_ray_facing_down;
-		rays[ray_index].is_ray_facing_left = is_ray_facing_left;
-		rays[ray_index].is_ray_facing_right = is_ray_facing_right;
-		rays[ray_index].wallhit_x = horizontal_wall_hit_x;
-		rays[ray_index].wallhit_y = horizontal_wall_hit_y;
-		rays[ray_index].wallhit_id = horizontal_wall_hit_id;
-		rays[ray_index].distance = horizontal_hit_distance;
+		if (found_horizontal_wall == true)
+		{
+			// Store horizontal ray information
+			rays[ray_index].ray_angle = ray_angle;
+			rays[ray_index].was_intersection_vertical = false;
+			rays[ray_index].is_ray_facing_up = is_ray_facing_up;
+			rays[ray_index].is_ray_facing_down = is_ray_facing_down;
+			rays[ray_index].is_ray_facing_left = is_ray_facing_left;
+			rays[ray_index].is_ray_facing_right = is_ray_facing_right;
+			rays[ray_index].wallhit_x = horizontal_wall_hit_x;
+			rays[ray_index].wallhit_y = horizontal_wall_hit_y;
+			rays[ray_index].wallhit_id = horizontal_wall_hit_id;
+			rays[ray_index].distance = horizontal_hit_distance;
+		}
 	}
 }
 
