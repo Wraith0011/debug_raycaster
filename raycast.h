@@ -20,10 +20,8 @@ typedef struct Ray
 }Ray;
 extern Ray rays[NUM_OF_RAYS];
 
-
 void cast_all_rays();
 void cast_ray(float angle, int ray_index);
-void generate_projection(Uint32* buffer);
 void draw_rays_on_minimap(SDL_Renderer* renderer);
 
 #endif

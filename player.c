@@ -8,7 +8,7 @@ void init_player()
 	player.collider_height = 5;
 	player.rotation_angle = PI/2;
 	player.turn_dir = 0;
-	player.turn_speed = 60 * (PI / 180);
+	player.turn_speed = 80 * (PI / 180);
 	player.walk_dir = 0;
 	player.walk_speed = 50.0f;
 	player.x = (MAP_NUM_COLS / 2) * TILE_SIZE;
